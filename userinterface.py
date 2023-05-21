@@ -17,7 +17,12 @@ class UserInterface:
         return calc_operation
         
     def input_num1(self):
-        num_1 = float(input("\nEnter the first number: "))
+        while True:
+            try:
+                num_1 = float(input("\nEnter the first number: "))
+                break
+            except ValueError:
+                print("\033[1;31m" + "Invalid input for the first number. Try again." + "\033[1;m")
         return num_1
     
     def input_num2(self):
