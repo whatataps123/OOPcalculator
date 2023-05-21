@@ -25,6 +25,15 @@ class UserInterface:
                 print("\033[1;31m" + "Invalid input for the first number. Try again." + "\033[1;m")
         return num_1
     
-    def input_num2(self):
-        num_2 = float(input("Enter the second number: "))
-        return num_2
+    def input_num2(self, calc_operation):
+        while True:
+            try:
+                num_2 = float(input("Enter the second number: "))
+                if calc_operation == 4 and num_2 == 0:
+                    # Insert handling errors
+                    raise ZeroDivisionError("\033[1;31m" + "Cannot divide by zero. Please choose another number." + "\033[1;m")
+                break
+            except ValueError:
+                print("\033[1;31m" + "Invalid input for the second number. Try again." + "\033[1;m")
+            except ZeroDivisionError as error:
+                print(error)
