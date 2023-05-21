@@ -16,4 +16,10 @@ class UserInterface:
                 
         return calc_operation
         
+    def input_num1(self):
+        num_1 = float(input("\nEnter the first number: "))
+        return num_1
     
+    def input_num2(self):
+        num_2 = float(input("Enter the second number: "))
+        return num_2

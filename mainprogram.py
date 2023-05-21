@@ -8,8 +8,10 @@ ui = UserInterface()
 ui.user_choose()
 # Insert handling errors
 # Ask user for num1
+ui.input_num1()
 # Insert handling errors
 # Ask user num2
+ui.input_num2()
 # Insert handling errors
 # Print the output
 # Ask the user again if they want to try again (y/n)
