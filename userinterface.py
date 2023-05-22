@@ -37,3 +37,4 @@ class UserInterface:
                 print("\033[1;31m" + "Invalid input for the second number. Try again." + "\033[1;m")
             except ZeroDivisionError as error:
                 print(error)
+        return num_2

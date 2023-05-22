@@ -17,5 +17,6 @@ num_2 = ui.input_num2(operation)
 # Insert handling errors
 # Print the output
 sum = calc.add(num_1,num_2)
+print(sum)
 # Ask the user again if they want to try again (y/n)
 # Insert handling errors
