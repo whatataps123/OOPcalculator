@@ -16,7 +16,21 @@ num_1 = ui.input_num1()
 num_2 = ui.input_num2(operation)
 # Insert handling errors
 # Print the output
-sum = calc.add(num_1,num_2)
-print(sum)
+if operation == 1:
+    sum = calc.add(num_1,num_2)
+    print(sum)
+
+elif operation == 2:
+    diff = calc.subtract(num_1,num_2)
+    print(diff)
+
+elif operation == 3:
+    product = calc.multiply(num_1,num_2)
+    print(product)
+
+elif operation == 4:
+    quotient = calc.divide(num_1,num_2)
+    print(quotient)
+
 # Ask the user again if they want to try again (y/n)
 # Insert handling errors
