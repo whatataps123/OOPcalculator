@@ -8,3 +8,5 @@ class Calculator:
     def multiply(self, num_1, num_2):
         return num_1 * num_2
     
+    def divide(self, num_1, num_2):
+        return num_1 / num_2
