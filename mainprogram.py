@@ -1,22 +1,34 @@
 # Joshua Lemuel Z. Centina
 # BS CpE 1-4
+import time
+import sys
 from userinterface import UserInterface
 from calculator import Calculator
 # Convert your previous calculator program into an OOP type of program.
 ui = UserInterface()
 calc = Calculator()
-# pseudocode
-# Ask user what operator will be used
+
+print("=============================================================================")
+def typewriter(text, delay=0.1):
+  for letter in text:
+    print(letter, end='', flush=True)
+    time.sleep(delay)
+  print()
+typewriter("\033[1;46m" + "Welcome to Joshua Lemuel Z. Centina's Calculator" + "\033[1;m")
+
+print("\nLoading:")
+animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
+for i in range(len(animation)):
+    time.sleep(0.2)
+    sys.stdout.write("\r" + animation[i % len(animation)])
+    sys.stdout.flush()
+print("\n")
+
+#Start
 while True:
     operation = ui.user_choose()
-    # Insert handling errors
-    # Ask user for num1
     num_1 = ui.input_num1()
-    # Insert handling errors
-    # Ask user num2
     num_2 = ui.input_num2(operation)
-    # Insert handling errors
-    # Print the output
     if operation == 1:
         sum = calc.add(num_1,num_2)
         print(sum)
@@ -34,5 +46,3 @@ while True:
         print(quotient)
     if not ui.retry():
         break
-# Ask the user again if they want to try again (y/n)
-# Insert handling errors
