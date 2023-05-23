@@ -38,3 +38,10 @@ class UserInterface:
             except ZeroDivisionError as error:
                 print(error)
         return num_2
+    
+    def retry(self):
+        user_retry = input("Do you want to perform another calculation? (yes/no): ")
+        if user_retry.lower() == "yes":
+            return True
+        else:
+            return False
