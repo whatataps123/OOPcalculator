@@ -40,8 +40,14 @@ class UserInterface:
         return num_2
     
     def retry(self):
-        user_retry = input("Do you want to perform another calculation? (yes/no): ")
-        if user_retry.lower() == "yes":
-            return True
-        else:
-            return False
+        while True:
+            try:
+                user_retry = input("Do you want to perform another calculation? (yes/no): ")
+                if user_retry.lower() == "yes":
+                    return True
+                elif user_retry.lower() == "no":
+                    return False
+                else:
+                    raise ValueError("Invalid input")
+            except ValueError:
+                print("Invalid input. Please enter 'yes' or 'no'.")
