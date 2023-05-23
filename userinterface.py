@@ -44,8 +44,11 @@ class UserInterface:
             try:
                 user_retry = input("Do you want to perform another calculation? (yes/no): ")
                 if user_retry.lower() == "yes":
+                    print("=============================================================================")
                     return True
                 elif user_retry.lower() == "no":
+                    print("\033[1;32m" + "Thank you for using the calculator." + "\033[1;m")
+                    print("=============================================================================")
                     return False
                 else:
                     raise ValueError("Invalid input")
