@@ -4,9 +4,11 @@ import time
 import sys
 from userinterface import UserInterface
 from calculator import Calculator
+from childcalculator import ChildCalculator
 # Convert your previous calculator program into an OOP type of program.
 ui = UserInterface()
 calc = Calculator()
+child = ChildCalculator()
 
 print("=============================================================================")
 def typewriter(text, delay=0.1):
@@ -31,6 +33,7 @@ while True:
     num_2 = ui.input_num2(operation)
     if operation == 1:
         sum = calc.add(num_1,num_2)
+        de = child.subtract(num_1,num_2)
         print("The sum:", "\033[1;43m" + str(sum) + "\033[1;m")
 
     elif operation == 2:
